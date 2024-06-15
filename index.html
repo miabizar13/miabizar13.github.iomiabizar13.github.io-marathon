@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi - Maybank Marathon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="logo.png" alt="Logo Lomba Marathon">
+            </div>
+        </header>
+        <h1>Maybank Marathon</h1>
+        <div id="form-pendaftaran">
+            <form id="registration-form" onsubmit="return submitForm()">
+                <h2>Detail Lomba</h2>
+                <p>Tanggal Lomba: 13 April 2024</p>
+                <p>Lokasi: Jalan Veteran, Kota Tangerang</p>
+                <p>Jam Lomba: 06.00 s.d. Selesai</p>
+
+                <h2>Informasi Peserta</h2>
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="nama-depan">Nama Depan:</label>
+                        <input type="text" id="nama-depan" name="nama-depan" required>
+                    </div>
+                    <div class="form-col">
+                        <label for="nama-belakang">Nama Belakang:</label>
+                        <input type="text" id="nama-belakang" name="nama-belakang" required>
+                    </div>
+                </div>
+
+                <label for="usia">Usia:</label>
+                <input type="number" id="usia" name="usia" required>
+
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="tempat-lahir">Tempat Lahir:</label>
+                        <input type="text" id="tempat-lahir" name="tempat-lahir" required>
+                    </div>
+                    <div class="form-col">
+                        <label for="tanggal-lahir">Tanggal Lahir:</label>
+                        <input type="date" id="tanggal-lahir" name="tanggal-lahir" required>
+                    </div>
+                </div>
+
+                <label for="jenis-kelamin">Jenis Kelamin:</label>
+                <select id="jenis-kelamin" name="jenis-kelamin" required>
+                    <option value="">Pilih</option>
+                    <option value="laki-laki">Laki-laki</option>
+                    <option value="perempuan">Perempuan</option>
+                </select>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="nomor-telpon">Nomor Telepon:</label>
+                <input type="tel" id="nomor-telpon" name="nomor-telpon" pattern="[0-9]*" required>
+
+                <label for="alamat-jalan">Alamat Jalan:</label>
+                <input type="text" id="alamat-jalan" name="alamat-jalan" required>
+
+                <label for="alamat-jalan-2">Alamat Jalan Baris Ke-2:</label>
+                <input type="text" id="alamat-jalan-2" name="alamat-jalan-2">
+
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="kabupaten-kota">Kabupaten/Kota:</label>
+                        <input type="text" id="kabupaten-kota" name="kabupaten-kota" required>
+                    </div>
+                    <div class="form-col">
+                        <label for="provinsi">Provinsi:</label>
+                        <input type="text" id="provinsi" name="provinsi" required>
+                    </div>
+                </div>
+
+                <label for="kode-pos">Kode Pos:</label>
+                <input type="text" id="kode-pos" name="kode-pos" pattern="[0-9]*" required>
+
+                <label for="foto-id-card">Foto ID Card:</label>
+                <input type="file" id="foto-id-card" name="foto-id-card" accept="image/*" required>
+
+                <label>Ukuran Kaus:</label>
+                <div class="form-row">
+                    <div class="form-col">
+                        <label><input type="radio" name="ukuran-kaus" value="XS" required> XS</label>
+                        <label><input type="radio" name="ukuran-kaus" value="S"> S</label>
+                        <label><input type="radio" name="ukuran-kaus" value="M"> M</label>
+                    </div>
+                    <div class="form-col">
+                        <label><input type="radio" name="ukuran-kaus" value="L"> L</label>
+                        <label><input type="radio" name="ukuran-kaus" value="XL"> XL</label>
+                        <label><input type="radio" name="ukuran-kaus" value="XXL"> XXL</label>
+                    </div>
+                </div>
+
+                <h2>Kontak Darurat</h2>
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="kontak-nama-depan">Nama Depan:</label>
+                        <input type="text" id="kontak-nama-depan" name="kontak-nama-depan" required>
+                    </div>
+                    <div class="form-col">
+                        <label for="kontak-nama-belakang">Nama Belakang:</label>
+                        <input type="text" id="kontak-nama-belakang" name="kontak-nama-belakang" required>
+                    </div>
+                </div>
+
+                <label for="kontak-telpon">Nomor Telepon:</label>
+                <input type="tel" id="kontak-telpon" name="kontak-telpon" pattern="[0-9]*" required>
+
+                <label for="hubungan">Hubungan Dengan Peserta:</label>
+                <input type="text" id="hubungan" name="hubungan" required>
+
+                <h2>Lembar Konfirmasi</h2>
+                <label><input type="checkbox" name="konfirmasi" required> Saya mengkonfirmasi bahwa saya dalam kondisi baik dan sehat;</label>
+                <label><input type="checkbox" name="konfirmasi" required> Saya tidak memiliki kondisi medis atau riwayat medis yang akan mempengaruhi partisipasi saya dalam acara ini;</label>
+                <label><input type="checkbox" name="konfirmasi" required> Saya mengakui bahwa lomba ini membutuhkan aktivitas fisik serta ada kemungkinan resiko dan bahaya;</label>
+                <label><input type="checkbox" name="konfirmasi" required> Saya mengkonfirmasi bahwa semua Informasi dalam formulir pendaftaran ini adalah akurat dan benar.</label>
+
+                <h2>Tanda Tangan Peserta</h2>
+                <canvas id="signature-pad" width="400" height="200" style="border:1px solid #000;"></canvas>
+                <center><button type="button" onclick="clearSignature()">Bersihkan Tanda Tangan</button></center>
+
+                <br><input type="submit" value="Daftar">
+            </form>
+        </div>
+        <div id="success-message" style="display: none;">
+            <p>Terima Kasih, pendaftaran anda akan kami proses. Semoga Sukses!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
